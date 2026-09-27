@@ -28,6 +28,7 @@ can share one database: PostgreSQL row locking is the only coordination.
 - [Testing](#testing)
 - [Limitations](#limitations)
 - [Design decisions](#design-decisions)
+- [License](#license)
 
 ## Quick start
 
@@ -382,3 +383,7 @@ These are deliberate trade-offs for the current scope:
   web framework is needed for seven routes.
 - **Prometheus client** rather than a hand-rolled exposition format: it is
   the de facto standard and provides correct histograms.
+
+## License
+
+[MIT](LICENSE)
