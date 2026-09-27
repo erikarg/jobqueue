@@ -321,6 +321,10 @@ Integration tests read `TEST_DATABASE_URL`. Each test runs in its own
 temporary PostgreSQL schema, so packages run in parallel against one database
 without interfering.
 
+CI (`.github/workflows/ci.yml`) runs `make lint` and `make test-integration`
+against a PostgreSQL 16 service container on every push and pull request to
+`main`.
+
 | Area | Tests |
 |------|-------|
 | State machine | Allowed transitions; the store accepts exactly those transitions for every status × operation. |
