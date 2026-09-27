@@ -27,6 +27,7 @@ can share one database: PostgreSQL row locking is the only coordination.
 - [Configuration](#configuration)
 - [Testing](#testing)
 - [Limitations](#limitations)
+- [Deployment](#deployment)
 - [Design decisions](#design-decisions)
 - [License](#license)
 
@@ -363,6 +364,14 @@ These are deliberate trade-offs for the current scope:
 - **The `webhook` example handler calls arbitrary URLs.** Fine for a demo; a
   real service would restrict destinations to avoid SSRF.
 - **No authentication** — out of scope.
+
+## Deployment
+
+Not deployed publicly. The API has no authentication, and the `webhook`
+example handler POSTs to any URL it is given, so a public instance would let
+anyone make it send requests on their behalf — including to internal
+addresses (SSRF). See [Limitations](#limitations). Run it locally with the
+[Quick start](#quick-start).
 
 ## Design decisions
 
